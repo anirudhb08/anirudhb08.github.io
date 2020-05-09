@@ -1,9 +1,1 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h1>Anirudh's Website</h1>
-
-
-</body>
-</html>
+Anirudh's Website
