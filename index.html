@@ -1,8 +1,37 @@
 <!DOCTYPE html>
 <html>
+<head>
+</head>
 <body>
 
 <h1>Anirudh's Website</h1>
 
+<button id="rzp-button1">Pay</button>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+var options = {
+    "key": "rzp_test_IuYRDuzZ7HB8Xu",
+    "amount": "100",
+    "currency": "INR",
+    "name": "Awesome Workshops",
+    "description": "Test Transaction",
+    "image": "https://anirudhb08.github.io",
+    "order_id": "order_EoKMrurWB5YfuM",
+    "handler": function (response){
+    	window.location = "http://anirudhb08.github.io/s.html"
+    }
+    "prefill":  {
+        "name": "Some thi ng"
+    },
+    "theme": {
+        "color": "#F37254"
+    }
+};
+var rzp1 = new Razorpay(options);
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+</script>
 </body>
 </html>
